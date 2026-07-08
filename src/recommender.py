@@ -26,8 +26,11 @@ class UserProfile:
     """
     favorite_genre: str
     favorite_mood: str
-    target_energy: float
-    likes_acoustic: bool
+    favorite_energy: float
+    favorite_tempo: float
+    favorite_valence: float
+    favorite_danceability: float
+    favorite_acousticness: float
 
 class Recommender:
     """
