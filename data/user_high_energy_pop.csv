@@ -1,0 +1,9 @@
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
+201,Electric Sunrise,Neon Beats,pop,happy,0.89,135,0.87,0.91,0.08
+202,Dance Explosion,Pulse Masters,pop,happy,0.91,140,0.89,0.93,0.06
+203,Party Anthem,DJ Lightning,pop,energetic,0.88,132,0.86,0.90,0.09
+204,Upbeat Energy,Bright Sounds,pop,happy,0.90,138,0.88,0.92,0.07
+205,Festival Vibes,Crowd Pleasers,pop,happy,0.87,130,0.85,0.88,0.10
+206,Club Heat,Bass Boosters,pop,energetic,0.92,142,0.87,0.94,0.05
+207,Summer Hits,Sunshine Pop,pop,happy,0.86,128,0.84,0.87,0.11
+208,Dancefloor King,Rhythm Makers,pop,happy,0.88,134,0.86,0.91,0.08

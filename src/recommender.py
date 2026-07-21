@@ -139,6 +139,7 @@ def score_song(user_prefs: Dict, song: Dict, all_songs: List[Dict] = None) -> Tu
     """Scores song against user preferences; weights features by entropy (consistency across dataset)."""
     score = 0.0
     reasons = []
+    scored_reasons = []
 
     # Calculate entropy-based weights from all songs
     weights = _get_feature_weights(all_songs) if all_songs else {
@@ -149,11 +150,11 @@ def score_song(user_prefs: Dict, song: Dict, all_songs: List[Dict] = None) -> Tu
     # Categorical features
     if 'genre' in user_prefs and user_prefs['genre'] == song['genre']:
         score += weights['genre']
-        reasons.append(f"Genre '{song['genre']}' matches (weight: {weights['genre']:.1f})")
+        scored_reasons.append((weights['genre'], f"Genre '{song['genre']}' matches (weight: {weights['genre']:.1f})"))
 
     if 'mood' in user_prefs and user_prefs['mood'] == song['mood']:
         score += weights['mood']
-        reasons.append(f"Mood '{song['mood']}' matches (weight: {weights['mood']:.1f})")
+        scored_reasons.append((weights['mood'], f"Mood '{song['mood']}' matches (weight: {weights['mood']:.1f})"))
 
     # Numeric features
     for feat in ['energy', 'tempo_bpm', 'valence', 'danceability', 'acousticness']:
@@ -171,7 +172,11 @@ def score_song(user_prefs: Dict, song: Dict, all_songs: List[Dict] = None) -> Tu
             match_score = max(0, (1 - distance) * weights[feat])
             if match_score > 0.05:
                 score += match_score
-                reasons.append(f"{feat}: {song_val:.2f} vs {user_val:.2f} (weight: {weights[feat]:.1f})")
+                scored_reasons.append((match_score, f"{feat}: {song_val:.2f} vs {user_val:.2f} (weight: {weights[feat]:.1f})"))
+
+    # Keep only top 3 reasons by weight
+    scored_reasons.sort(key=lambda x: x[0], reverse=True)
+    reasons = [reason for _, reason in scored_reasons[:3]]
 
     return (score, reasons)
 

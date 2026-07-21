@@ -1,0 +1,9 @@
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
+401,Metal Storm,Iron Rage,metal,aggressive,0.94,170,0.25,0.45,0.06
+402,Rock Destroyer,Thunder Kings,rock,intense,0.92,155,0.40,0.65,0.08
+403,Shattered Fury,Chaos Band,metal,aggressive,0.95,172,0.22,0.42,0.05
+404,Heavy Impact,Dark Sound,rock,intense,0.91,152,0.38,0.62,0.10
+405,Intense Riff,Electric Storm,rock,intense,0.93,158,0.42,0.68,0.09
+406,Metallic Rage,Heavy Hitters,metal,aggressive,0.93,168,0.24,0.44,0.07
+407,Rock Crusher,Power Chords,rock,intense,0.90,150,0.39,0.61,0.11
+408,Aggressive Beat,Distortion Kings,metal,aggressive,0.94,165,0.23,0.43,0.06

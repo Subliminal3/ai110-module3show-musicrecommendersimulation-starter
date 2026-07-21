@@ -1,0 +1,6 @@
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
+1,Silent Void,Minimalist,ambient,calm,0.01,40,0.05,0.02,0.99
+2,Deafening Peak,Maximum,metal,aggressive,0.99,200,0.95,0.98,0.01
+3,Midpoint Song,Balanced,pop,happy,0.50,100,0.50,0.50,0.50
+4,Quiet Whisper,Soft,lofi,chill,0.05,55,0.10,0.08,0.95
+5,Explosive Energy,Chaos,rock,intense,0.98,195,0.92,0.96,0.03

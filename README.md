@@ -140,8 +140,9 @@ Read and complete `model_card.md`:
 
 Write 1 to 2 paragraphs here about what you learned:
 
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
 
+Building this recommender taught me that turning listning data and user history into song predictions is about identifying patters and weighing what attributes matter most. I knew that songs could be classified into genres and artists but I now know how many different attributes are in each song. By analyzing the users listening history and searching the database you are able to match songs based on patterns. The difficult part is determining how to balance these patterns and avoid biases. 
+
+This system definitely has many biases and pittfalls but with more time you could iron them out and create a more detailed, complex recommendation algorithm.
 
 
