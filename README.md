@@ -22,10 +22,10 @@ Explain your design in plain language.
 From what I understand two ways software like Spotify recommends songs is based on listening history, matching commonly
   liked music with eachother. And suggesting songs based on the attributes of the songs themselves. 
 
-For my project I will focus on the attributes of the music. The algorithm will check the users listening history and
+For my project I will assign weights using entropy based scoring. The algorithm will check the users listening history and
   determine which rules like 'genre, mood, energy, and tempo' to determine which rule each song has most in common.
   from there, the scoring will put more weight into the rules that are more common. It will then recommend songs that 
-  match the different rules based on priority.
+  match the different rules based on priority. 
 
 Some prompts to answer:
 
@@ -34,7 +34,11 @@ Some prompts to answer:
 - What information does your `UserProfile` store
     User profile will store the rank of importance for each user based on their history.
 - How does your `Recommender` compute a score for each song
+    Using entropy-based scoring it will determine which attribute is most common in the users song history and give it higher priority
 - How do you choose which songs to recommend
+    Pick songs based on which attribute the user favors
+
+A potential bias is that the user wont experience new music outside of their prefered attributes.
 
 You can include a simple diagram or bullet list if helpful.
 
